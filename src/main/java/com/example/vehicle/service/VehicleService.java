@@ -8,7 +8,6 @@ import com.example.vehicle.config.JwtTokenUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -56,6 +55,7 @@ public class VehicleService {
                 .orElseThrow(() -> new RuntimeException("Vehicle not found or access denied"));
 
         existingVehicle.setName(updatedVehicle.getName());
+        existingVehicle.setModel(updatedVehicle.getModel());
         existingVehicle.setType(updatedVehicle.getType());
         existingVehicle.setPlate(updatedVehicle.getPlate());
         existingVehicle.setYear(updatedVehicle.getYear());
@@ -76,4 +76,5 @@ public class VehicleService {
 
         vehicleRepository.delete(vehicle);
     }
+
 }

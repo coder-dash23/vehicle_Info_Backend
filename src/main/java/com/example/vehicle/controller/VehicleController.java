@@ -42,4 +42,5 @@ public class VehicleController {
         vehicleService.deleteVehicle(token, id);
         return "Vehicle deleted successfully!";
     }
+
 }
