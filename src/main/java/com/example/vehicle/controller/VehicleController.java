@@ -10,7 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/vehicles")
-@CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
+@CrossOrigin(origins = "https://vehicle-info-frontend.vercel.app/", allowCredentials = "true")
 @RequiredArgsConstructor
 public class VehicleController {
 
